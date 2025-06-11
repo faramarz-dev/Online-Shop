@@ -25,7 +25,7 @@ function BestProducts() {
       </div>
 
       <div className="inline-flex gap-12 overflow-x-auto w-[100%] p-3 mt-7">
-        {BestProductListData.map((item, i) => (
+        {BestProductListData.map((item) => (
           <BestProductsCard
             key={item.product_id}
             product_id={item.product_id}

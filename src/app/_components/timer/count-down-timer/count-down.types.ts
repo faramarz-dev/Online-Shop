@@ -1,4 +1,4 @@
 export type CountdownTimerProps = {
-  targetDate: String;
+  targetDate: string;
 };
 

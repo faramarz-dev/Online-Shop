@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
+import Image from "next/image";
 export default function ScrollToTopButton() {
     const [showButton, setShowButton] = useState(false);
 
@@ -25,7 +25,7 @@ export default function ScrollToTopButton() {
                 showButton ? "opacity-100 scale-75 bg-gradient-to-r from-slate-100 to-pink-100 hover:scale-90 hover:shadow-2xl" : "opacity-0 scale-0"
             }`}
         >
-            <img src="./images/icons/scroll/scrollUp.png" alt="scrollUp" />
+            <Image src="./images/icons/scroll/scrollUp.png" alt="scrollUp" width={20} height={20}/>
         </button>
     );
 }

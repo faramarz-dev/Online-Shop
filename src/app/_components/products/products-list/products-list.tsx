@@ -26,7 +26,7 @@ function ProductsList() {
           </Link>
         </div>
         <div className="grid xs:grid-cols-1 place-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 3xl:grid-cols-6 lg:grid-cols-4 mt-12">
-          {ProductsListData.slice(0, 12).map((item, i) => (
+          {ProductsListData.slice(0, 12).map((item) => (
             <ProductsCard
               key={item.product_id}
               product_id={item.product_id}

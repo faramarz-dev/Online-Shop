@@ -2,14 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import {
-  IconAccount,
-  IconBar,
-  IconCart,
-  IconClose,
-  IconCompare,
-  IconWishlist,
-} from "../icons/icons";
+import { IconBar } from "../icons/icons";
 
 import Image from "next/image";
 import { navItems } from "@/data/navItem.data";
