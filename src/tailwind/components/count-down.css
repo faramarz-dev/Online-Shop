@@ -1,0 +1,19 @@
+.timerWrapper {
+  @apply flex items-center gap-2;
+}
+
+.timer {
+  @apply flex flex-col;
+}
+
+.time {
+  @apply flex h-10 w-10 items-center justify-center rounded-md bg-pink-200 font-bold text-purple-950;
+}
+
+.timer-text {
+  @apply text-center text-xxs uppercase text-pink-100;
+}
+
+.spreed {
+  @apply text-md font-bold text-shop-gray-200;
+}
