@@ -2,10 +2,10 @@ import React from "react";
 import Slideshow from "../slideshow/slideshow";
 
 const images = [
-  "./images/banner/banner-1.jpg",
-  "./images/banner/banner-2.webp",
-  "./images/banner/banner-3.webp",
-  "./images/banner/banner-5.jpg",
+  "/images/banner/banner-1.jpg",
+  "/images/banner/banner-2.webp",
+  "/images/banner/banner-3.webp",
+  "/images/banner/banner-5.jpg",
 ];
 function BannerSlideer() {
   return (

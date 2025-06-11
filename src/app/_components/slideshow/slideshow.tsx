@@ -1,4 +1,3 @@
-// components/Slideshow.js
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
@@ -37,6 +36,8 @@ const Slideshow: React.FC<SlideshowProps> = ({ images, interval = 3000 }) => {
         <Image
           key={index}
           src={image}
+          width={1000}
+          height={100}
           alt={`Slide ${index + 1}`}
           className={`absolute top-0 left-0 w-full h-96 transition-opacity duration-1000  ${
             index === currentIndex ? "opacity-100" : "opacity-0"
@@ -49,7 +50,7 @@ const Slideshow: React.FC<SlideshowProps> = ({ images, interval = 3000 }) => {
         onClick={goToPrevSlide}
         className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-300  h-[50%] rounded-tl-3xl rounded-tr-md rounded-bl-3xl rounded-br-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       >
-        <Image src="./images/icons/banner-icons/arrow-left.png" alt="" />
+        <Image src="/images/icons/banner-icons/arrow-left.png" alt="arrow-left" width={30} height={20}/>
       </button>
 
       {/* دکمه بعدی */}
@@ -57,7 +58,7 @@ const Slideshow: React.FC<SlideshowProps> = ({ images, interval = 3000 }) => {
         onClick={goToNextSlide}
         className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-300 h-[50%] rounded-tl-md rounded-tr-3xl rounded-bl-md rounded-br-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       >
-        <Image src="./images/icons/banner-icons/arrow-right.png" alt="banner" />
+        <Image src="/images/icons/banner-icons/arrow-right.png" alt="arrow-right" width={30} height={20}/>
       </button>
 
       {/* نقاط */}
