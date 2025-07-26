@@ -35,12 +35,14 @@ export default function Home() {
         <section className="containerD">
           <BestProducts />
         </section>
+        <hr className="border border-gray-100 w-full" />
         <section className="containerD xs:hidden md:block">
           <BannerSlider />
         </section>
         <section className="containerD">
           <ProductsList />
         </section>
+        <hr className="border border-gray-100 w-full" />
         <section className="containerD">
           <NewArrivals />
         </section>
@@ -51,4 +53,3 @@ export default function Home() {
     </>
   );
 }
-

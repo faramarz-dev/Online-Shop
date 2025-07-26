@@ -129,12 +129,15 @@ export default function Products() {
 
   return (
     <>
-      <section>
+      <section className="ml-3 lg:ml-0">
         <section>
           <BreadCrumb items={BreadCrumbItem} />
         </section>
         <section className="containerD mt-6 border-b-2">
-          <ProductGroups selectedSlug={selectedSlug} onSelectCategory={handleSelectCategory} />
+          <ProductGroups
+            selectedSlug={selectedSlug}
+            onSelectCategory={handleSelectCategory}
+          />
           <button
             type="button"
             onClick={handleReset}
@@ -147,7 +150,11 @@ export default function Products() {
           <AllProducts visibleProducts={visibleProducts} />
         </section>
         <section>
-          <Pagination activePage={activePage} totalItems={filteredProducts.length} itemsPerPage={PRODUCTS_PER_PAGE} />
+          <Pagination
+            activePage={activePage}
+            totalItems={filteredProducts.length}
+            itemsPerPage={PRODUCTS_PER_PAGE}
+          />
         </section>
       </section>
     </>

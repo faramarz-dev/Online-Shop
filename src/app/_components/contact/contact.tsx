@@ -42,9 +42,9 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="px-24 h-screen py-24 bg-gradient-to-r from-cyan-900 to-purple-950">
+    <div className="xs:px-12 lg:px-24 xs:h-[1000px] py-24 bg-gradient-to-r from-cyan-900 to-purple-950">
       <div>
-        <h1 className="text-3xl font-semibold text-white">Contact Us</h1>
+        <h1 className="lg:text-3xl xs:text-2xl font-semibold text-white">Contact Us</h1>
         <p className="text-lg text-white">
           Whatever your goal - we will get you there.
         </p>
