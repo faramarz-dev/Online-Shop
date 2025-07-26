@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
           <div className="header__nav ">
             <div className="header-logo">
               {/* Logo */}
-              <Link href="/" className="hidden w-32 md:inline-block lg:w-40">
+              <Link href="/" className="w-40">
                 <Image
                   src="/images/logo/logo1.png"
                   alt="logo"
@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
                 <input
                   type="text"
                   placeholder="search for items"
-                  className="px-4 py-2 w-64 border rounded-lg border-black focus:border-2 focus:border-purple-600 outline-none"
+                  className="px-2 py-2 lg:w-64 lg:h-12 xs:w-56 xs:h-10 border rounded-lg border-purple-900 focus:border-2 focus:border-purple-600 outline-none"
                 />
               </div>
 

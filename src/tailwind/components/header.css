@@ -1,13 +1,13 @@
 .header-wrapper {
-  @apply top-0  z-[999] w-full fixed [@media(min-width:1600px)]:max-w-[2000px]  border-b border-shop-gray-border bg-purple-100 dark:bg-purple-500 ;
+  @apply top-0  z-[999] w-full fixed [@media(min-width:1600px)]:max-w-[2000px]  border-b border-shop-gray-border bg-purple-100 dark:bg-purple-950 ;
   .header-wrapper__header {
     @apply containerD mx-auto h-[70px] px-6;
     .header__nav {
-      @apply lg:flex lg:items-center  ;
+      @apply lg:flex ;
       .header-logo {
         @apply flex h-full items-center justify-between;
         .header__search-box {
-          @apply ml-4 inline-flex lg:mt-2;
+          @apply mt-2 mr-2;
         }
         .toggle-btn {
           @apply text-gray-500 hover:text-gray-600 focus:text-gray-600 focus:outline-none dark:text-gray-200 dark:hover:text-gray-400 dark:focus:text-gray-400;
