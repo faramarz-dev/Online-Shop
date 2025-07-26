@@ -1,1 +1,1 @@
-export const COUNTDOWN_TARGET_DATE = "2025-6-30";
+export const COUNTDOWN_TARGET_DATE = "2025-9-30";
