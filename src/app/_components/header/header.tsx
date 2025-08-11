@@ -40,7 +40,7 @@
 //                 />
 //               </div>
 
-//               {/* Mobile menu button */}
+//               {/* Mobile menu button
 //               <div className="flex lg:hidden ">
 //                 <button
 //                   onClick={toggleMenu}
@@ -50,7 +50,7 @@
 //                 >
 //                   {isOpen ? <IconBar strokeWidth={3} /> : <HeaderMobile />}
 //                 </button>
-//               </div>
+//               </div> */}
 //             </div>
 
 //             {/* Menu */}
@@ -97,7 +97,7 @@ export const Header: React.FC = () => {
       {isOpen && (
         <div
           onClick={closeMenu}
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300"
+          className="fixed inset-0 bg-black bg-opacity-65 z-40 transition-opacity duration-300"
         ></div>
       )}
 
@@ -105,7 +105,7 @@ export const Header: React.FC = () => {
       {isOpen && <HeaderMobile onClose={closeMenu} />}
 
       {/* 🔲 Navbar اصلی */}
-      <nav className="header-wrapper z-50 relative">
+      <nav className="header-wrapper ">
         <div className="header-wrapper__header">
           <div className="header__nav">
             <div className="header-logo">
@@ -134,7 +134,7 @@ export const Header: React.FC = () => {
                   className="toggle-btn"
                   aria-label="toggle menu"
                 >
-                  <IconBar strokeWidth={3} />
+                  <IconBar strokeWidth={3}/>
                 </button>
               </div>
             </div>

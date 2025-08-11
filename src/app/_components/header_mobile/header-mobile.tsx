@@ -53,7 +53,7 @@ interface HeaderMobileProps {
 
 export const HeaderMobile: React.FC<HeaderMobileProps> = ({ onClose }) => {
   return (
-    <div className="fixed cursor-auto right-0 top-0 z-[999] w-[320px] bg-purple-100 dark:bg-purple-500/40 p-8">
+    <div className="fixed cursor-auto right-0 top-0 z-[999] w-[320px] bg-purple-100 dark:bg-[#24013f] p-8">
       {/* logo && close btn */}
       <div className="flex justify-between border-b border-shop-gray-border pb-4">
         {/* <Link href="/" className="relative inline-block w-32 md:w-40">
@@ -72,7 +72,7 @@ export const HeaderMobile: React.FC<HeaderMobileProps> = ({ onClose }) => {
             className="w-full px-3 py-2 border border-purple-500 rounded-md focus:outline-none focus:border-purple-700 focus:border-2"
           />
         </div>
-        <div className="h-0 bg-black text-gray-500 hover:text-gray-600 cursor-pointer"  onClick={onClose}>
+        <div className="h-0 bg-black text-gray-500 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-400 cursor-pointer"  onClick={onClose}>
           <IconClose strokeWidth={3} />
         </div>
       </div>
