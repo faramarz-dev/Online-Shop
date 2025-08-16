@@ -1,5 +1,5 @@
 .header-wrapper {
-  @apply top-0  z-[990] w-full fixed [@media(min-width:1600px)]:max-w-[2000px] border-b  bg-purple-100 dark:bg-[#1E0C4A] ;
+  @apply top-0  z-[990] w-full fixed [@media(min-width:1600px)]:max-w-[2000px] border-b -translate-x-1/2 left-1/2  bg-purple-100 dark:bg-[#1E0C4A] ;
   .header-wrapper__header {
     @apply containerD mx-auto h-[70px] px-6;
     .header__nav {

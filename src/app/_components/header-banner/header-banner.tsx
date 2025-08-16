@@ -35,7 +35,7 @@ import Image from "next/image";
 function HeaderBanner() {
   return (
     <>
-      <div className="relative flex flex-col mt-16 md:flex-row w-full max-w-[2000px] z-0">
+      <div className="relative flex flex-col mt-16 md:flex-row w-full max-w-[2000px] mx-auto z-0">
         <Image
           src="/images/header/header-banner.jpg"
           alt="banner"
