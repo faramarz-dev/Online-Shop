@@ -1,12 +1,17 @@
-import React from "react";
+"use client";
+
+import React, { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import toast from "react-hot-toast";
 import { IProductsCardProps } from "./products-card.types";
 import SmallTag from "@/app/_components/small-tag/small-tag";
 import { Rate } from "@/app/_components/rate/rate";
 import { IconWishlist } from "@/app/_components/icons/icons";
+import { CartContext } from "@/contexts/cart-context";
 
 const ProductsCard: React.FC<IProductsCardProps> = ({
+  product_id,
   title,
   img,
   price,
@@ -16,6 +21,18 @@ const ProductsCard: React.FC<IProductsCardProps> = ({
   tag_type,
   slug,
 }) => {
+  const { addToCart } = useContext(CartContext);
+  const finalPrice = ((1 - discount / 100) * price).toFixed(0);
+  const handleAddToCart = () => {
+    addToCart({
+      id: product_id,
+      name: title,
+      price: Number(finalPrice),
+      img: `/images/products/${img || "none.jpg"}`,
+    });
+    toast.success("Product successfully added to cart!");
+  };
+
   return (
     <>
       <div className="product-card-wrapper group relative">
@@ -58,9 +75,12 @@ const ProductsCard: React.FC<IProductsCardProps> = ({
           <div
             className={`product-card-buy-button hidden h-[60px] items-center justify-center rounded-md border border-shop-gray-400 px-4 text-center hover:text-white group-hover:flex`}
           >
-            <a className="" href={`/products/${slug}`}>
+            <button
+              onClick={handleAddToCart}
+              className="w-full h-full text-shop-gray-700 hover:text-white"
+            >
               Add To Cart
-            </a>
+            </button>
           </div>
         </div>
       </div>

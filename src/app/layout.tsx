@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientWrapper from "./_components/client-wrapper/client-wrapper";
+import {Toaster} from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "فروشگاه آنلاین",
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ClientWrapper>{children}</ClientWrapper>
+        <ClientWrapper>
+          {children}
+          <Toaster position="top-center" />
+        </ClientWrapper>
       </body>
     </html>
   );

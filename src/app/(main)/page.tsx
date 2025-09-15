@@ -12,16 +12,16 @@ import Support from "../_components/support/support";
 
 export default function Home() {
   const router = useRouter();
-  const [selectedSlug, setSelectedSlug] = useState<string | null>(null); // ✅ مدیریت دسته انتخاب‌شده
+  const [selectedSlug, setSelectedSlug] = useState<string | null>(null); // ✅ مدیریت دسته انتخاب‌ شده
 
   const handleSelectCategory = (slug: string) => {
     setSelectedSlug(slug);
-    router.push(`/products?category=${slug}`); // ✅ هدایت به صفحه محصولات با دسته انتخاب‌شده
+    router.push(`/products?category=${slug}`); // ✅ هدایت به صفحه محصولات با دسته انتخاب‌ شده
   };
 
   return (
     <>
-      <section className="container-fluid mx-auto flex flex-col items-center space-y-[50px] py-16 relative">
+      <section className=" mx-auto flex flex-col items-center space-y-[50px] py-16 relative">
         <section className="containerD">
           {/* ✅ ارسال `selectedSlug` و `onSelectCategory` به `ProductGroups` */}
           <ProductGroups
@@ -35,14 +35,14 @@ export default function Home() {
         <section className="containerD">
           <BestProducts />
         </section>
-        <hr className="border border-gray-100 w-full" />
+        <hr className="border border-gray-100 w-1/2" />
         <section className="containerD xs:hidden md:block">
           <BannerSlider />
         </section>
         <section className="containerD">
           <ProductsList />
         </section>
-        <hr className="border border-gray-100 w-full" />
+        <hr className="border border-gray-100 w-1/2" />
         <section className="containerD">
           <NewArrivals />
         </section>
