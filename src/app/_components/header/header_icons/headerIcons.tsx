@@ -8,7 +8,7 @@ import { CartContext } from "@/contexts/cart-context";
 export const HeaderIcons = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const { cartItems, removeFromCart } = useContext(CartContext);
+  const { cartItems } = useContext(CartContext);
   // مدیریت کلیک خارج از منو
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

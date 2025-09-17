@@ -91,7 +91,7 @@ const BestProductsCard: React.FC<IProductCard> = ({
   ratersNumber,
   discount,
   tag_type,
-  slug,
+
 }) => {
   const { addToCart } = useContext(CartContext);
 
