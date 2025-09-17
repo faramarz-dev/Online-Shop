@@ -1,30 +1,31 @@
-import React, { useState, useRef, useEffect } from "react";
+"use client"
+
+import React, { useState, useRef, useEffect, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { CartContext } from "@/contexts/cart-context";
 
 export const HeaderIcons = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const menuRef = useRef<HTMLDivElement>(null);
-  
-    // مدیریت کلیک خارج از منو
-    useEffect(() => {
-      const handleClickOutside = (event: MouseEvent) => {
-        if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-          setMenuOpen(false);
-        }
-      };
-  
-      // اضافه کردن لیسنر به سند
-      document.addEventListener("mousedown", handleClickOutside);
-      
-      // پاک کردن لیسنر هنگام خروج از کامپوننت
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, []);
-  
-  
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const { cartItems, removeFromCart } = useContext(CartContext);
+  // مدیریت کلیک خارج از منو
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+
+    // اضافه کردن لیسنر به سند
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // پاک کردن لیسنر هنگام خروج از کامپوننت
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className="header-icons-wrapper ">
       {/* آیکون حساب کاربری */}
@@ -61,10 +62,7 @@ export const HeaderIcons = () => {
 
       {/* لیست علاقه‌مندی‌ها */}
       <div className="header-icons">
-        <Link
-          href="/shop-wishlist"
-          className="header-icons-link "
-        >
+        <Link href="/shop-wishlist" className="header-icons-link ">
           <div className="relative">
             <span className="absolute top-6 bg-purple-600 text-white text-xs rounded-full px-2 py-0 shadow-md">
               3
@@ -86,8 +84,8 @@ export const HeaderIcons = () => {
           className="header-icons-link flex items-center space-x-2 hover:text-gray-300 transition-all"
         >
           <div className="">
-            <span className=" absolute top-11  bg-purple-600 text-white text-xs rounded-full px-2 py-0 shadow-md">
-              0
+            <span className= {`absolute top-11 bg-purple-600 text-white text-xs rounded-full px-2 py-0 shadow-md ${cartItems.length ===0 ?  "hidden" : "block" }`}>
+              {cartItems.length}
             </span>
             <Image
               src="/images/icons/header-icons/cart-icon.png"

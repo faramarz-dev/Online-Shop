@@ -17,7 +17,7 @@ function AttributeSection() {
           <div className="w-[35%] h-auto absolute scale-75 sm:mt-3 lg:scale-100 lg:m-9 md:scale-90">
             <div>
               <p className="text-pink-300 text-xl">Shoping Festival</p>
-              <h3 className="lg:text-[4rem] text-[2.5rem] md:text-[3rem]">Exceptional Purchase</h3>
+              <h3 className="xl:text-[4rem] text-[2.5rem] md:text-[3rem]">Exceptional Purchase</h3>
               <p className="text-shop-gray-border mt-5 mb-3">
                 Lorem ipsum dolor sit,
               </p>

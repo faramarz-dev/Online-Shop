@@ -10,7 +10,7 @@ const ShopCart = () => {
   const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="p-6 max-w-4xl mx-auto h-96 text-center bg-gray-100">
+    <div className="p-6 max-w-4xl mx-auto min-h-96 text-center bg-gray-100">
       <h1 className="text-2xl font-bold mb-6">🛒 Your shopping cart</h1>
 
       {cartItems.length === 0 ? (

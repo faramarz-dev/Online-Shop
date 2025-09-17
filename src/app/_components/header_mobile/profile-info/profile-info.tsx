@@ -45,7 +45,7 @@ const ProfileInfo = () => {
                 </li>
                 <li>
                     <Link
-                        href="user-panel.html"
+                        href="/shop-cart"
                         className="text-sm text-shop-gray-400"
                     >
                         My Orders

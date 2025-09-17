@@ -19,7 +19,6 @@ const ProductsCard: React.FC<IProductsCardProps> = ({
   ratersNumber,
   discount,
   tag_type,
-  slug,
 }) => {
   const { addToCart } = useContext(CartContext);
   const finalPrice = ((1 - discount / 100) * price).toFixed(0);
