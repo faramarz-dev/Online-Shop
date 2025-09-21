@@ -4,11 +4,14 @@ import React, { useState, useRef, useEffect, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CartContext } from "@/contexts/cart-context";
+import { WishlistContext } from "@/contexts/wishlist-context";
+
 
 export const HeaderIcons = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const { cartItems } = useContext(CartContext);
+  const { wishlistItems } = useContext(WishlistContext);
   // مدیریت کلیک خارج از منو
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -62,10 +65,10 @@ export const HeaderIcons = () => {
 
       {/* لیست علاقه‌مندی‌ها */}
       <div className="header-icons">
-        <Link href="/shop-wishlist" className="header-icons-link ">
-          <div className="relative">
-            <span className="absolute top-6 bg-purple-600 text-white text-xs rounded-full px-2 py-0 shadow-md">
-              3
+        <Link href="/wishlist" className="header-icons-link ">
+          <div>
+            <span className= {`absolute top-11 bg-purple-600 text-white text-xs rounded-full px-2 py-0 shadow-md ${wishlistItems.length ===0 ?  "hidden" : "block" }`}>
+              {wishlistItems.length}
             </span>
             <Image
               src="/images/icons/header-icons/wishlist-icon.png"
@@ -83,9 +86,9 @@ export const HeaderIcons = () => {
           href="/shop-cart"
           className="header-icons-link flex items-center space-x-2 hover:text-gray-300 transition-all"
         >
-          <div className="">
+          <div>
             <span className= {`absolute top-11 bg-purple-600 text-white text-xs rounded-full px-2 py-0 shadow-md ${cartItems.length ===0 ?  "hidden" : "block" }`}>
-              {cartItems.length}
+              {cartItems.reduce((sum, item) => sum + item.quantity, 0)}
             </span>
             <Image
               src="/images/icons/header-icons/cart-icon.png"

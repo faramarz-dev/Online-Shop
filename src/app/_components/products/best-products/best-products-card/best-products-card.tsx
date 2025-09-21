@@ -76,11 +76,15 @@ import React, { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IProductCard } from "./best-products-card .types";
-import { IconWishlist } from "@/app/_components/icons/icons";
 import SmallTag from "@/app/_components/small-tag/small-tag";
 import { Rate } from "@/app/_components/rate/rate";
 import { CartContext } from "@/contexts/cart-context"; // مسیر دقیق رو با توجه به پروژه تنظیم کن
 import toast from "react-hot-toast";
+import { WishlistContext } from "@/contexts/wishlist-context";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { MdAddShoppingCart } from "react-icons/md";
+
+
 
 const BestProductsCard: React.FC<IProductCard> = ({
   product_id,
@@ -91,29 +95,49 @@ const BestProductsCard: React.FC<IProductCard> = ({
   ratersNumber,
   discount,
   tag_type,
-
 }) => {
   const { addToCart } = useContext(CartContext);
 
   const finalPrice = ((1 - discount / 100) * price).toFixed(0);
+  const { toggleWishlist, isInWishlist } = useContext(WishlistContext);
 
   const handleAddToCart = () => {
-    
     addToCart({
       id: product_id,
       name: title,
       price: Number(finalPrice),
-      img: `/images/bestproducts/${img || "none.jpg"}`
+      img: `/images/bestproducts/${img || "none.jpg"}`,
+      quantity: 0,
     });
-    toast.success("Product successfully added to cart!");
+    toast.success("Product successfully added to cart!",{
+      icon: <MdAddShoppingCart className="text-green-600 h-6 w-6" />
+    });
+  };
+
+  const handleAddToWishlist = () => {
+    toggleWishlist({
+      id: product_id,
+      name: title,
+      img: `/images/bestproducts/${img || "none.jpg"}`,
+    });
+    toast.success("Product successfully added to wishlist!",{
+      icon: <FaHeart className="text-red-600 h-6 w-6" />
+    });
   };
 
   return (
     <div className="product-card-wrapper group relative">
       <div className="card-tools absolute right-6 flex-col gap-2 group-hover:flex">
-        <Link href="/shop-wishlist">
-          <IconWishlist />
-        </Link>
+        <button
+          onClick={handleAddToWishlist}
+          className="p-2 rounded-full transition"
+        >
+          {isInWishlist(product_id, title) ? (
+            <FaHeart className="text-red-600 h-6 w-6" />
+          ) : (
+            <FaRegHeart className="text-gray-900 h-6 w-6" />
+          )}
+        </button>
       </div>
 
       <div className="product-card-image-box">
