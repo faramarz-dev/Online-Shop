@@ -18,7 +18,7 @@ const Wishlist = () => {
 
         {wishlistItems.length === 0 ? (
           <p className="text-center text-gray-500 text-lg">
-            You haven't added any products to your wishlist yet.
+            You haven&apos;t added any products to your wishlist yet.
           </p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
