@@ -28,7 +28,7 @@ const ProductsCard: React.FC<IProductsCardProps> = ({
   const { addToCart } = useContext(CartContext);
   const finalPrice = ((1 - discount / 100) * price).toFixed(0);
   const { toggleWishlist, isInWishlist } = useContext(WishlistContext);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const productImages = img
     ? img.map(img => `/images/products/${img}`)
@@ -41,7 +41,7 @@ const ProductsCard: React.FC<IProductsCardProps> = ({
       id: product_id,
       name: title,
       price: Number(finalPrice),
-      img: productImages[currentImageIndex],
+      img: productImages[0],
       quantity: 0,
     });
     toast.success("Product successfully added to cart!", {
@@ -53,7 +53,7 @@ const ProductsCard: React.FC<IProductsCardProps> = ({
     toggleWishlist({
       id: product_id,
       name: title,
-      img: productImages[currentImageIndex],
+      img: productImages[0],
       slug: slug,
       category: category,
     });
