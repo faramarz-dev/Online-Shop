@@ -67,7 +67,7 @@ export const HeaderIcons = () => {
       <div className="header-icons">
         <Link href="/wishlist" className="header-icons-link ">
           <div>
-            <span className= {`absolute top-11 bg-purple-600 text-white text-xs rounded-full px-2 py-0 shadow-md ${wishlistItems.length ===0 ?  "hidden" : "block" }`}>
+            <span className= {`absolute top-9 bg-purple-600 text-white text-xs rounded-full px-2 py-0 shadow-md ${wishlistItems.length ===0 ?  "hidden" : "block" }`}>
               {wishlistItems.length}
             </span>
             <Image
@@ -87,7 +87,7 @@ export const HeaderIcons = () => {
           className="header-icons-link flex items-center space-x-2 hover:text-gray-300 transition-all"
         >
           <div>
-            <span className= {`absolute top-11 bg-purple-600 text-white text-xs rounded-full px-2 py-0 shadow-md ${cartItems.length ===0 ?  "hidden" : "block" }`}>
+            <span className= {`absolute top-9 bg-purple-600 text-white text-xs rounded-full px-2 py-0 shadow-md ${cartItems.length ===0 ?  "hidden" : "block" }`}>
               {cartItems.reduce((sum, item) => sum + item.quantity, 0)}
             </span>
             <Image

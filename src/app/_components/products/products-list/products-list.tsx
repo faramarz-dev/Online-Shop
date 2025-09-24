@@ -29,15 +29,7 @@ function ProductsList() {
           {ProductsListData.slice(0, 12).map((item) => (
             <ProductsCard
               key={item.product_id}
-              product_id={item.product_id}
-              title={item.title}
-              img={item.img}
-              price={item.price}
-              discount={item.discount}
-              rate={item.rate}
-              ratersNumber={item.ratersNumber}
-              tag_type={item.tag_type}
-              slug={item.slug}
+              {...item}
             />
           ))}
         </div>

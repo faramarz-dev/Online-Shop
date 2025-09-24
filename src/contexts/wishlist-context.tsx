@@ -6,20 +6,22 @@ interface WishlistItem {
   id: string;
   name: string;
   img: string;
+  slug?: string;
+  category?: string;
 }
 
 interface WishlistContextType {
   wishlistItems: WishlistItem[];
   toggleWishlist: (item: WishlistItem) => void;
   isInWishlist: (id: string ,name:string) => boolean;
-  removeItem: (id: string, name: string) => void; // Optional property
+  removeItem: (id: string, name: string) => void; 
 }
 
 export const WishlistContext = createContext<WishlistContextType>({
   wishlistItems: [],
   toggleWishlist: () => {},
   isInWishlist: () => false,
-  removeItem: () => {}, // Default value for optional property
+  removeItem: () => {}, 
 });
 
 export const WishlistProvider = ({ children }: { children: ReactNode }) => {

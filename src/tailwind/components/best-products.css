@@ -1,5 +1,5 @@
 .product-card-wrapper {
-    @apply relative w-[250px] rounded-md border border-shop-gray-200 p-2.5 hover:border-shop-gray-600;
+    @apply relative w-[250px] rounded-md border border-shop-gray-200 p-2.5 h-[410px] hover:border-shop-gray-600;
     .card-tools {
         @apply absolute right-6 hidden flex-col gap-2 group-hover:flex;
     }

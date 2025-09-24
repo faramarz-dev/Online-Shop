@@ -8,7 +8,7 @@ export const fontSize = {
   "md-2": "15px",
   "lg": "18px",
   "xl": "20px",
-  "2xl": "22px",
+  "2xl": "30px",
   "3xl": "58px",
 };
 export const boxShadow = {

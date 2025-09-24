@@ -39,7 +39,7 @@ const Wishlist = () => {
                     {item.name}
                   </h2>
                   <Link
-                    href={`/product-details/${item.id}`}
+                    href={`/products/${item.category}/${item.slug}`}
                     className="block mt-4 text-center text-purple-600 hover:underline"
                   >
                     View Details
