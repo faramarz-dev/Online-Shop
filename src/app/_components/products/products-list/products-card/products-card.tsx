@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import toast from "react-hot-toast";
