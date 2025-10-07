@@ -1,17 +1,13 @@
 import { ProductsListData } from "@/data/products.data";
 import { BestProductListData } from "@/data/best-products.data";
 import ProductDetailsPage from "./products-details";
-import { IProductDetailsProps } from "@/app/_components/products/product-details/products-details.types";
 
-type PageProps = {
-  params: {
-    category: string;
-    slug: string;
-  };
+type PageParams = {
+  category: string;
+  slug: string;
 };
 
-
-export async function generateMetadata({ params }: { params: IProductDetailsProps }) {
+export async function generateMetadata({ params }: { params: PageParams }) {
   const { slug, category } = params;
   const allProductsData = [...ProductsListData, ...BestProductListData];
   const product = allProductsData.find(
@@ -26,12 +22,11 @@ export async function generateMetadata({ params }: { params: IProductDetailsProp
   }
 
   return {
-    title: `${product.title} `,
+    title: `${product.title} | ${product.category}`,
     description: `خرید ${product.title} با قیمت ${product.price} تومان و تخفیف ${product.discount}% در دسته‌بندی ${product.category}.`,
   };
 }
 
-export default function Page({ params }: PageProps) {
-  return <ProductDetailsPage key={params.slug} {...params} />;
+export default function Page({ params }: { params: PageParams }) {
+  return <ProductDetailsPage category={params.category} slug={params.slug} />;
 }
-

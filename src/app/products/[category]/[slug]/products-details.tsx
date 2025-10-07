@@ -1,15 +1,12 @@
 "use client";
 
-import { useParams } from "next/navigation";
-import BreadCrumb from "@/app/_components/bread-crumbs/bread-crumbs";
 import ProductDetails from "@/app/_components/products/product-details/product-details";
+import BreadCrumb from "@/app/_components/bread-crumbs/bread-crumbs";
 import { ProductsListData } from "@/data/products.data";
 import { BestProductListData } from "@/data/best-products.data";
-export default function ProductDetailsPage() {
-  const { category, slug } = useParams();
 
-
-const allProductsData=[...ProductsListData,...BestProductListData]
+export default function ProductDetailsPage({ category, slug }: { category: string; slug: string }) {
+  const allProductsData = [...ProductsListData, ...BestProductListData];
   const product = allProductsData.find(
     (p) => p.slug === slug && p.category === category
   );
@@ -22,23 +19,17 @@ const allProductsData=[...ProductsListData,...BestProductListData]
     );
   }
 
-  const BreadCrumbItem = [
+  const breadcrumbItems = [
     { label: "Home", href: "/" },
     { label: "Products", href: "/products" },
-    { label: `${product.category}`, href: `/products?category=${product.category}` },
-    { label: `${product.title}`, href: `/products/${product.category}/${product.slug}` },
+    { label: product.category, href: `/products?category=${product.category}` },
+    { label: product.title, href: `/products/${product.category}/${product.slug}` },
   ];
 
   return (
     <section>
-      <section>
-        <BreadCrumb items={BreadCrumbItem} />
-      </section>
-      <section>
-        <ProductDetails {...product}/>
-      </section>
-      <section>
-      </section>
+      <BreadCrumb items={breadcrumbItems} />
+      <ProductDetails {...product} />
     </section>
   );
 }
