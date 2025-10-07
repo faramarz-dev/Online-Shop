@@ -9,7 +9,7 @@ export interface IProductsCardProps {
   ratersNumber?: number;
   discount: number;
   tag_type?: TagStatus;
-  slug?: string;
-  category?: string;
+  slug: string;
+  category: string;
   description?: string;
 }

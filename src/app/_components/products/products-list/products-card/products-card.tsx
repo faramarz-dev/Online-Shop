@@ -12,6 +12,7 @@ import { WishlistContext } from "@/contexts/wishlist-context";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { MdAddShoppingCart } from "react-icons/md";
 import { TbListDetails } from "react-icons/tb";
+import { IoHeartDislikeSharp } from "react-icons/io5";
 
 const ProductsCard: React.FC<IProductsCardProps> = ({
   product_id,
@@ -28,13 +29,12 @@ const ProductsCard: React.FC<IProductsCardProps> = ({
   const { addToCart } = useContext(CartContext);
   const finalPrice = ((1 - discount / 100) * price).toFixed(0);
   const { toggleWishlist, isInWishlist } = useContext(WishlistContext);
-  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const productImages = img
-    ? img.map(img => `/images/products/${img}`)
+    ? img.map(img => `/images/${img}`)
     : img 
-      ? [`/images/products/${img}`] 
-      : ["/images/products/none.jpg"];
+      ? [`/images/${img}`] 
+      : ["/images/none.jpg"];
 
   const handleAddToCart = () => {
     addToCart({
@@ -57,9 +57,16 @@ const ProductsCard: React.FC<IProductsCardProps> = ({
       slug: slug,
       category: category,
     });
-    toast.success("Product successfully added to wishlist!", {
-      icon: <FaHeart className="text-red-600 h-6 w-6" />,
-    });
+    if (!isInWishlist(product_id, title)) {
+      toast.success("Product successfully added to wishlist!", {
+        icon: <FaHeart className="text-red-600 h-6 w-6" />,
+      });
+    } else {
+      toast.error("Product removed from wishlist!", {
+        icon: <IoHeartDislikeSharp className="text-red-600 h-7 w-7" />,
+      });
+    }
+    
   };
 
   return (
@@ -89,20 +96,6 @@ const ProductsCard: React.FC<IProductsCardProps> = ({
               className="h-full w-full object-contain"
             />
             
-            {/* Image indicators for multiple images */}
-            {/* {productImages.length > 1 && (
-              <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
-                {productImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2 h-2 rounded-full ${
-                      currentImageIndex === index ? 'bg-purple-700' : 'bg-gray-300'
-                    }`}
-                  />
-                ))}
-              </div>
-            )} */}
           </div>
         </div>
 

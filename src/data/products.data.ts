@@ -11,7 +11,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "camera-alpha",
     tag_type: "custome",
-    img:[ "camera/camera-1.png","camera/camera-1-1.png","camera/camera-1-2.png","camera/camera-1-3.png"],
+    img:[ "products/camera/camera-1.png","products/camera/camera-1-1.png","products/camera/camera-1-2.png","products/camera/camera-1-3.png"],
     category: "camera",
   },
   {
@@ -25,7 +25,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 102,
     slug: "camera-beta",
     tag_type: "custome",
-    img:[ "camera/camera-2.png"],
+    img:[ "products/camera/camera-2.png"],
     category: "camera",
   },
   {
@@ -39,7 +39,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 96,
     slug: "camera-gamma",
     tag_type: "custome",
-    img:[ "camera/camera-3.png"],
+    img:[ "products/camera/camera-3.png"],
     category: "camera",
   },
   {
@@ -53,7 +53,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "camera-delta",
     tag_type: "custome",
-    img:[ "camera/camera-4.png"],
+    img:[ "products/camera/camera-4.png"],
     category: "camera",
   },
   {
@@ -67,7 +67,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-alpha",
     tag_type: "custome",
-    img:[ "headphone/headphone-1.png"],
+    img:[ "products/headphone/headphone-1.png"],
     category: "headphone",
   },
   {
@@ -81,7 +81,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-beta",
     tag_type: "custome",
-    img:[ "headphone/headphone-3.png"],
+    img:[ "products/headphone/headphone-3.png"],
     category: "headphone",
   },
   {
@@ -95,7 +95,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-gamma",
     tag_type: "custome",
-    img:[ "headphone/headphone-4.png"],
+    img:[ "products/headphone/headphone-4.png"],
     category: "headphone",
   },
   {
@@ -108,7 +108,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-pro",
     tag_type: "custome",
-    img:[ "headphone/headphone-5.png"],
+    img:[ "products/headphone/headphone-5.png"],
     category: "headphone",
   },
   {
@@ -122,7 +122,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-alpha",
     tag_type: "custome",
-    img:[ "laptop/laptop-1.png"],
+    img:[ "products/laptop/laptop-1.png"],
     category: "laptop",
   },
   {
@@ -136,7 +136,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-beta",
     tag_type: "custome",
-    img:[ "laptop/laptop-2.png"],
+    img:[ "products/laptop/laptop-2.png"],
     category: "laptop",
   },
   {
@@ -150,7 +150,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-gamma",
     tag_type: "custome",
-    img:[ "laptop/laptop-3.png"],
+    img:[ "products/laptop/laptop-3.png"],
     category: "laptop",
   },
   {
@@ -164,7 +164,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-delta",
     tag_type: "custome",
-    img:[ "laptop/laptop-4.png"],
+    img:[ "products/laptop/laptop-4.png"],
     category: "laptop",
   },
 
@@ -179,7 +179,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-alpha",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-1.png"],
+    img:[ "products/smartWatch/smartwatch-1.png"],
     category: "smartwatch",
   },
   {
@@ -193,7 +193,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-beta",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-2.png"],
+    img:[ "products/smartWatch/smartwatch-2.png"],
     category: "smartwatch",
   },
   {
@@ -206,7 +206,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-gamma",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-6.png"],
+    img:[ "products/smartWatch/smartwatch-6.png"],
     category: "smartwatch",
   },
   {
@@ -220,7 +220,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "mobile-delta",
     tag_type: "custome",
-    img:[ "mobile/mobile-5.png"],
+    img:[ "products/mobile/mobile-5.png"],
     category: "mobile",
   },
   {
@@ -234,7 +234,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-delta",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-6.png"],
+    img:[ "products/smartWatch/smartwatch-6.png"],
     category: "smartwatch",
   },
   {
@@ -248,7 +248,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "tablet-alpha",
     tag_type: "custome",
-    img:[ "tablet/tablet-1.png"],
+    img:[ "products/tablet/tablet-1.png"],
     category: "tablet",
   },
   {
@@ -262,7 +262,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "tablet-beta",
     tag_type: "custome",
-    img:[ "tablet/tablet-2.png"],
+    img:[ "products/tablet/tablet-2.png"],
     category: "tablet",
   },
   {
@@ -276,7 +276,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "tablet-gamma",
     tag_type: "custome",
-    img:[ "tablet/tablet-3.png"],
+    img:[ "products/tablet/tablet-3.png"],
     category: "tablet",
   },
   {
@@ -290,7 +290,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-delta",
     tag_type: "custome",
-    img:[ "headphone/headphone-4.png"],
+    img:[ "products/headphone/headphone-4.png"],
     category: "headphone",
   },
   {
@@ -303,7 +303,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-epsilon",
     tag_type: "custome",
-    img:[ "headphone/headphone-5.png"],
+    img:[ "products/headphone/headphone-5.png"],
     category: "headphone",
   },
   {
@@ -317,7 +317,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-alpha-2",
     tag_type: "custome",
-    img:[ "laptop/laptop-1.png"],
+    img:[ "products/laptop/laptop-1.png"],
     category: "laptop",
   },
   {
@@ -331,7 +331,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-beta-2",
     tag_type: "custome",
-    img:[ "laptop/laptop-2.png"],
+    img:[ "products/laptop/laptop-2.png"],
     category: "laptop",
   },
   {
@@ -345,7 +345,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-gamma-2",
     tag_type: "custome",
-    img:[ "laptop/laptop-3.png"],
+    img:[ "products/laptop/laptop-3.png"],
     category: "laptop",
   },
   {
@@ -359,7 +359,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-delta-2",
     tag_type: "custome",
-    img:[ "laptop/laptop-4.png"],
+    img:[ "products/laptop/laptop-4.png"],
     category: "laptop",
   },
   {
@@ -373,7 +373,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "mobile-epsilon",
     tag_type: "custome",
-    img:[ "mobile/mobile-1.png"],
+    img:[ "products/mobile/mobile-1.png"],
     category: "mobile",
   },
   {
@@ -387,7 +387,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "mobile-zeta",
     tag_type: "custome",
-    img:[ "mobile/mobile-3.png"],
+    img:[ "products/mobile/mobile-3.png"],
     category: "mobile",
   },
   {
@@ -401,7 +401,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "mobile-eta",
     tag_type: "custome",
-    img:[ "mobile/mobile-4.png"],
+    img:[ "products/mobile/mobile-4.png"],
     category: "mobile",
   },
   {
@@ -414,7 +414,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-epsilon",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-1.png"],
+    img:[ "products/smartWatch/smartwatch-1.png"],
     category: "smartwatch",
   },
   {
@@ -428,7 +428,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-zeta",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-2.png"],
+    img:[ "products/smartWatch/smartwatch-2.png"],
     category: "smartwatch",
   },
   {
@@ -442,7 +442,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-eta",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-6.png"],
+    img:[ "products/smartWatch/smartwatch-6.png"],
     category: "smartwatch",
   },
   {
@@ -456,7 +456,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "camera-epsilon",
     tag_type: "custome",
-    img:[ "camera/camera-1.png"],
+    img:[ "products/camera/camera-1.png"],
     category: "camera",
   },
 
@@ -471,7 +471,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 102,
     slug: "camera-zeta",
     tag_type: "custome",
-    img:[ "camera/camera-2.png"],
+    img:[ "products/camera/camera-2.png"],
     category: "camera",
   },
   {
@@ -485,7 +485,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 96,
     slug: "camera-eta",
     tag_type: "custome",
-    img:[ "camera/camera-3.png"],
+    img:[ "products/camera/camera-3.png"],
     category: "camera",
   },
   {
@@ -499,7 +499,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "camera-theta",
     tag_type: "custome",
-    img:[ "camera/camera-4.png"],
+    img:[ "products/camera/camera-4.png"],
     category: "camera",
   },
   {
@@ -513,7 +513,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-zeta",
     tag_type: "custome",
-    img:[ "headphone/headphone-1.png"],
+    img:[ "products/headphone/headphone-1.png"],
     category: "headphone",
   },
   {
@@ -527,7 +527,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-theta",
     tag_type: "custome",
-    img:[ "headphone/headphone-3.png"],
+    img:[ "products/headphone/headphone-3.png"],
     category: "headphone",
   },
   {
@@ -540,7 +540,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-iota",
     tag_type: "custome",
-    img:[ "headphone/headphone-4.png"],
+    img:[ "products/headphone/headphone-4.png"],
     category: "headphone",
   },
   {
@@ -554,7 +554,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-kappa",
     tag_type: "custome",
-    img:[ "headphone/headphone-5.png"],
+    img:[ "products/headphone/headphone-5.png"],
     category: "headphone",
   },
   {
@@ -568,7 +568,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-epsilon",
     tag_type: "custome",
-    img:[ "laptop/laptop-1.png"],
+    img:[ "products/laptop/laptop-1.png"],
     category: "laptop",
   },
   {
@@ -582,7 +582,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-zeta",
     tag_type: "custome",
-    img:[ "laptop/laptop-2.png"],
+    img:[ "products/laptop/laptop-2.png"],
     category: "laptop",
   },
   {
@@ -596,7 +596,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-eta",
     tag_type: "custome",
-    img:[ "laptop/laptop-3.png"],
+    img:[ "products/laptop/laptop-3.png"],
     category: "laptop",
   },
   {
@@ -610,7 +610,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-theta",
     tag_type: "custome",
-    img:[ "laptop/laptop-4.png"],
+    img:[ "products/laptop/laptop-4.png"],
     category: "laptop",
   },
   {
@@ -624,7 +624,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "mobile-theta",
     tag_type: "custome",
-    img:[ "mobile/mobile-1.png"],
+    img:[ "products/mobile/mobile-1.png"],
     category: "mobile",
   },
   {
@@ -638,7 +638,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "mobile-iota",
     tag_type: "custome",
-    img:[ "mobile/mobile-3.png"],
+    img:[ "products/mobile/mobile-3.png"],
     category: "mobile",
   },
   {
@@ -652,7 +652,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "mobile-kappa",
     tag_type: "custome",
-    img:[ "mobile/mobile-4.png"],
+    img:[ "products/mobile/mobile-4.png"],
     category: "mobile",
   },
   {
@@ -666,7 +666,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-theta",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-1.png"],
+    img:[ "products/smartWatch/smartwatch-1.png"],
     category: "smartwatch",
   },
   {
@@ -680,7 +680,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-iota",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-2.png"],
+    img:[ "products/smartWatch/smartwatch-2.png"],
     category: "smartwatch",
   },
   {
@@ -694,7 +694,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-kappa",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-6.png"],
+    img:[ "products/smartWatch/smartwatch-6.png"],
     category: "smartwatch",
   },
   {
@@ -708,7 +708,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "camera-theta-2",
     tag_type: "custome",
-    img:[ "camera/camera-1.png"],
+    img:[ "products/camera/camera-1.png"],
     category: "camera",
   },
   {
@@ -722,7 +722,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 102,
     slug: "camera-iota",
     tag_type: "custome",
-    img:[ "camera/camera-2.png"],
+    img:[ "products/camera/camera-2.png"],
     category: "camera",
   },
   {
@@ -736,7 +736,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 96,
     slug: "camera-kappa",
     tag_type: "custome",
-    img:[ "camera/camera-3.png"],
+    img:[ "products/camera/camera-3.png"],
     category: "camera",
   },
   {
@@ -750,7 +750,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "camera-lambda",
     tag_type: "custome",
-    img:[ "camera/camera-4.png"],
+    img:[ "products/camera/camera-4.png"],
     category: "camera",
   },
   {
@@ -764,7 +764,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-lambda",
     tag_type: "custome",
-    img:[ "headphone/headphone-1.png"],
+    img:[ "products/headphone/headphone-1.png"],
     category: "headphone",
   },
   {
@@ -778,7 +778,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-mu",
     tag_type: "custome",
-    img:[ "headphone/headphone-3.png"],
+    img:[ "products/headphone/headphone-3.png"],
     category: "headphone",
   },
   {
@@ -792,7 +792,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-nu",
     tag_type: "custome",
-    img:[ "headphone/headphone-4.png"],
+    img:[ "products/headphone/headphone-4.png"],
     category: "headphone",
   },
   {
@@ -806,7 +806,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-xi",
     tag_type: "custome",
-    img:[ "headphone/headphone-5.png"],
+    img:[ "products/headphone/headphone-5.png"],
     category: "headphone",
   },
   {
@@ -820,7 +820,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-lambda",
     tag_type: "custome",
-    img:[ "laptop/laptop-1.png"],
+    img:[ "products/laptop/laptop-1.png"],
     category: "laptop",
   },
   {
@@ -834,7 +834,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-mu",
     tag_type: "custome",
-    img:[ "laptop/laptop-2.png"],
+    img:[ "products/laptop/laptop-2.png"],
     category: "laptop",
   },
   {
@@ -848,7 +848,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-nu",
     tag_type: "custome",
-    img:[ "laptop/laptop-3.png"],
+    img:[ "products/laptop/laptop-3.png"],
     category: "laptop",
   },
   {
@@ -862,7 +862,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "laptop-xi",
     tag_type: "custome",
-    img:[ "laptop/laptop-4.png"],
+    img:[ "products/laptop/laptop-4.png"],
     category: "laptop",
   },
   {
@@ -876,7 +876,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "mobile-lambda",
     tag_type: "custome",
-    img:[ "mobile/mobile-1.png"],
+    img:[ "products/mobile/mobile-1.png"],
     category: "mobile",
   },
   {
@@ -890,7 +890,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "mobile-mu",
     tag_type: "custome",
-    img:[ "mobile/mobile-3.png"],
+    img:[ "products/mobile/mobile-3.png"],
     category: "mobile",
   },
   {
@@ -904,7 +904,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "mobile-nu",
     tag_type: "custome",
-    img:[ "mobile/mobile-4.png"],
+    img:[ "products/mobile/mobile-4.png"],
     category: "mobile",
   },
   {
@@ -918,7 +918,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-lambda",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-1.png"],
+    img:[ "products/smartWatch/smartwatch-1.png"],
     category: "smartwatch",
   },
   {
@@ -932,7 +932,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-mu",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-2.png"],
+    img:[ "products/smartWatch/smartwatch-2.png"],
     category: "smartwatch",
   },
   {
@@ -946,7 +946,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "smartwatch-nu",
     tag_type: "custome",
-    img:[ "smartWatch/smartwatch-6.png"],
+    img:[ "products/smartWatch/smartwatch-6.png"],
     category: "smartwatch",
   },
   {
@@ -960,7 +960,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "camera-lambda-2",
     tag_type: "custome",
-    img:[ "camera/camera-1.png"],
+    img:[ "products/camera/camera-1.png"],
     category: "camera",
   },
   {
@@ -974,7 +974,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 102,
     slug: "camera-mu",
     tag_type: "custome",
-    img:[ "camera/camera-2.png"],
+    img:[ "products/camera/camera-2.png"],
     category: "camera",
   },
   {
@@ -987,7 +987,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 96,
     slug: "camera-nu",
     tag_type: "custome",
-    img:[ "camera/camera-3.png"],
+    img:[ "products/camera/camera-3.png"],
     category: "camera",
   },
   {
@@ -1000,7 +1000,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "camera-xi",
     tag_type: "custome",
-    img:[ "camera/camera-4.png"],
+    img:[ "products/camera/camera-4.png"],
     category: "camera",
   },
   {
@@ -1013,7 +1013,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-omicron",
     tag_type: "custome",
-    img:[ "headphone/headphone-1.png"],
+    img:[ "products/headphone/headphone-1.png"],
     category: "headphone",
   },
   {
@@ -1026,7 +1026,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-pi",
     tag_type: "custome",
-    img:[ "headphone/headphone-3.png"],
+    img:[ "products/headphone/headphone-3.png"],
     category: "headphone",
   },
   {
@@ -1040,7 +1040,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-rho",
     tag_type: "custome",
-    img:[ "headphone/headphone-4.png"],
+    img:[ "products/headphone/headphone-4.png"],
     category: "headphone",
   },
   {
@@ -1053,7 +1053,7 @@ export const ProductsListData: IProductsCardProps[] = [
     ratersNumber: 56,
     slug: "headphone-sigma",
     tag_type: "custome",
-    img:[ "headphone/headphone-5.png"],
+    img:[ "products/headphone/headphone-5.png"],
     category: "headphone",
   },
   {
@@ -1062,7 +1062,7 @@ export const ProductsListData: IProductsCardProps[] = [
     description:
       "Slim and efficient laptop for productivity and entertainment.",
     slug: "laptop-omicron",
-    img:[ "laptop/laptop-1.png"],
+    img:[ "products/laptop/laptop-1.png"],
     category: "laptop",
     price: 1000,
     discount: 20,

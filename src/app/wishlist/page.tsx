@@ -8,7 +8,7 @@ function ShopCartPage() {
       href: "/",
     },
     {
-      label: "Wish List",
+      label: "Wishlist",
       href: "/wishlist",
     },
   ];

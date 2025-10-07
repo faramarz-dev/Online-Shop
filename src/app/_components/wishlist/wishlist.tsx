@@ -29,7 +29,7 @@ const Wishlist = () => {
               >
                 <Image
                   src={item.img}
-                  alt={item.name}
+                  alt={item.name || "Product image"}
                   width={200}
                   height={200}
                   className="object-contain mx-auto mb-4"

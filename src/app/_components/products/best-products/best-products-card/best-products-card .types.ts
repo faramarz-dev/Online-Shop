@@ -1,13 +1,15 @@
 import { TagStatus } from "../../../types/tag-status.type";
 
-export interface IProductCard {
+export interface IBestProductCard {
   product_id: string;
   title: string;
-  img?: string;
+  img?: string[];
   price: number;
   rate?: number;
   ratersNumber?: number;
   discount: number;
   tag_type?: TagStatus;
-  slug?: string;
+  slug: string;
+  category: string;
+  description?: string;
 }

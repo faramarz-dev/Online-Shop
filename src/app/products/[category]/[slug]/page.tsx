@@ -1,40 +1,34 @@
-"use client";
-
-import { useParams } from "next/navigation";
-import BreadCrumb from "@/app/_components/bread-crumbs/bread-crumbs";
-import ProductDetails from "@/app/_components/products/product-details/product-details";
 import { ProductsListData } from "@/data/products.data";
+import { BestProductListData } from "@/data/best-products.data";
+import ProductDetailsPage from "./products-details";
+import { IProductDetailsProps } from "@/app/_components/products/product-details/products-details.types";
 
-export default function ProductDetailsPage() {
-  const { category, slug } = useParams();
+// Define the props type for the Page component
+interface PageProps {
+  params: IProductDetailsProps;
+}
 
-  const product = ProductsListData.find(
+export async function generateMetadata({ params }: { params: IProductDetailsProps }) {
+  const { slug, category } = params;
+  const allProductsData = [...ProductsListData, ...BestProductListData];
+  const product = allProductsData.find(
     (p) => p.slug === slug && p.category === category
   );
 
   if (!product) {
-    return (
-      <div className="text-center mt-20 text-red-600 text-lg">
-        Product not found.
-      </div>
-    );
+    return {
+      title: "محصول پیدا نشد | فروشگاه ما",
+      description: "محصول مورد نظر در فروشگاه موجود نیست.",
+    };
   }
 
-  const BreadCrumbItem = [
-    { label: "Home", href: "/" },
-    { label: "Products", href: "/products" },
-    { label: `${product.category}`, href: `/products?category=${product.category}` },
-    { label: `${product.title}`, href: `/products/${product.category}/${product.slug}` },
-  ];
+  return {
+    title: `${product.title} `,
+    description: `خرید ${product.title} با قیمت ${product.price} تومان و تخفیف ${product.discount}% در دسته‌بندی ${product.category}.`,
+  };
+}
 
-  return (
-    <section>
-      <section>
-        <BreadCrumb items={BreadCrumbItem} />
-      </section>
-      <section>
-        <ProductDetails category={product.category} slug={product.slug}/>
-      </section>
-    </section>
-  );
+// Update the Page component to receive and pass params
+export default function Page({ params }: PageProps) {
+  return <ProductDetailsPage />;
 }

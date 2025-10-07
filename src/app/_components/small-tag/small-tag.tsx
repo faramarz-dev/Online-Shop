@@ -17,7 +17,7 @@ const SmallTag: React.FC<SmallTagProps> = ({ tag_type, children }) => {
 
   return (
     <span
-      className={`label w-fit rounded-2xl px-3 py-1 text-sm text-white absolute ${
+      className={`label w-fit rounded-2xl px-3 py-1 text-sm text-white absolute z-10 ${
         tagClasses[tag_type] || "bg-gray-500"
       }`}
     >

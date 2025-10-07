@@ -7,18 +7,25 @@ import toast from "react-hot-toast";
 import { MdAddShoppingCart } from "react-icons/md";
 import Image from "next/image";
 import { Rate } from "@/app/_components/rate";
+import { WishlistContext } from "@/contexts/wishlist-context";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { IoHeartDislikeSharp } from "react-icons/io5";
+import { BestProductListData } from "@/data/best-products.data";
+import { IProductDetailsProps } from "./products-details.types";
 
-interface ProductDetailsProps {
-  category?: string;
-  slug?: string;
-}
 
-export default function ProductDetails({ category, slug }: ProductDetailsProps) {
+
+export default function ProductDetails({
+  category,
+  slug,
+
+}: IProductDetailsProps) {
   const { addToCart, removeFromCart, cartItems } = useContext(CartContext);
   const [isInCart, setIsInCart] = useState(false);
   const [selectedImage, setSelectedImage] = useState(0);
 
-  const product = ProductsListData.find(
+  const allProductsData=[...ProductsListData,...BestProductListData]
+  const product = allProductsData.find(
     (p) => p.slug === slug && p.category === category
   );
 
@@ -44,7 +51,7 @@ export default function ProductDetails({ category, slug }: ProductDetailsProps) 
       id: product.product_id,
       name: product.title,
       price: Number(finalPrice),
-      img: `/images/products/${product.img?.[0] || product.img || "none.jpg"}`,
+      img: `/images/${product.img?.[0] || product.img || "none.jpg"}`,
       quantity: 0,
     });
     toast.success("Product successfully added to cart!", {
@@ -56,16 +63,37 @@ export default function ProductDetails({ category, slug }: ProductDetailsProps) 
     removeFromCart(product.product_id, product.title);
   };
 
+  const { toggleWishlist, isInWishlist } = useContext(WishlistContext);
+  const handleAddToWishlist = () => {
+    toggleWishlist({
+      id: product.product_id,
+      name: product.title,
+      img: productImages[0],
+      slug: slug,
+      category: category,
+    });
+
+    if (!isInWishlist(product.product_id, product.title)) {
+      toast.success("Product successfully added to wishlist!", {
+        icon: <FaHeart className="text-red-600 h-6 w-6" />,
+      });
+    } else {
+      toast.error("Product removed from wishlist!", {
+        icon: <IoHeartDislikeSharp className="text-red-600 h-7 w-7" />,
+      });
+    }
+  };
+
   const productImages = product.img
-    ? product.img.map(img => `/images/products/${img}`)
-    : product.img 
-      ? [`/images/products/${product.img}`] 
-      : ["/images/products/none.jpg"];
+    ? product.img.map((img) => `/images/${img}`)
+    : product.img
+    ? [`/images/${product.img}`]
+    : ["/images/none.jpg"];
 
   return (
     <section className="containerD mt-20">
-      <div className="flex flex-col md:flex-row gap-20 mt-10 w-3/4 mx-auto">
-        <div className="flex flex-col md:flex-row gap-10 border p-2 rounded-lg">
+      <div className="flex flex-col md:flex-row gap-10 justify-center mt-10 w-full p-2 mx-auto">
+        <div className="flex flex-col md:flex-row gap-10 border p-2 rounded-lg ">
           {/* Main Image */}
           <div className="rounded-md overflow-hidden">
             <Image
@@ -76,7 +104,7 @@ export default function ProductDetails({ category, slug }: ProductDetailsProps) 
               className="w-[420px] h-[420px] object-contain"
             />
           </div>
-          
+
           {/* Thumbnail Gallery */}
           <div className="flex flex-row md:flex-col gap-2 mt-4 overflow-x-auto pb-3 justify-center items-center">
             {productImages.map((image, index) => (
@@ -84,7 +112,9 @@ export default function ProductDetails({ category, slug }: ProductDetailsProps) 
                 key={index}
                 onClick={() => setSelectedImage(index)}
                 className={`flex-shrink-0 w-20 h-20 rounded-md overflow-hidden border-2 ${
-                  selectedImage === index ? 'border-purple-700' : 'border-gray-200 blur-[2px]'
+                  selectedImage === index
+                    ? "border-purple-700"
+                    : "border-gray-200 blur-[2px]"
                 }`}
               >
                 <Image
@@ -99,10 +129,22 @@ export default function ProductDetails({ category, slug }: ProductDetailsProps) 
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col gap-4">
-          <h1 className="text-xl md:text-2xl xl:text-3xl font-bold text-gray-900">{product.title}</h1>
+        <div className="flex flex-col gap-10">
+          <h1 className="text-xl md:text-2xl xl:text-3xl font-bold text-gray-900">
+            {product.title}
+          </h1>
 
-          <Rate rate={product.rate} ratersNumber={product.ratersNumber} />
+          <div className="flex justify-between items-center">
+            <Rate rate={product.rate} ratersNumber={product.ratersNumber} />
+
+            <button onClick={handleAddToWishlist}>
+              {isInWishlist(product.product_id, product.title) ? (
+                <FaHeart className="text-red-600 h-6 w-6" />
+              ) : (
+                <FaRegHeart className="text-gray-900 h-6 w-6" />
+              )}
+            </button>
+          </div>
 
           <div className="text-xl text-gray-800">
             Price:{" "}
@@ -118,7 +160,7 @@ export default function ProductDetails({ category, slug }: ProductDetailsProps) 
           {!isInCart ? (
             <button
               onClick={handleAddToCart}
-              className="bg-purple-700 text-white px-3 py-1 rounded hover:bg-purple-600 text-lg"
+              className="bg-purple-800 text-white px-3 py-3 rounded hover:bg-purple-600 text-lg"
             >
               Add to Cart
             </button>
@@ -132,7 +174,10 @@ export default function ProductDetails({ category, slug }: ProductDetailsProps) 
               </button>
 
               <span className="text-lg font-semibold text-gray-700">
-                {cartItems.find((item) => item.id === product.product_id)?.quantity}
+                {
+                  cartItems.find((item) => item.id === product.product_id)
+                    ?.quantity
+                }
               </span>
 
               <button
