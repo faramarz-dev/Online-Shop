@@ -7,8 +7,10 @@ type PageParams = {
   slug: string;
 };
 
-export async function generateMetadata({ params }: { params: PageParams }) {
-  const { slug, category } = params;
+export async function generateMetadata({ params }: { params: Promise<PageParams> }) {
+  const resolvedParams = await params;
+  const { slug, category } = resolvedParams;
+
   const allProductsData = [...ProductsListData, ...BestProductListData];
   const product = allProductsData.find(
     (p) => p.slug === slug && p.category === category
@@ -27,6 +29,7 @@ export async function generateMetadata({ params }: { params: PageParams }) {
   };
 }
 
-export default function Page({ params }: { params: PageParams }) {
-  return <ProductDetailsPage category={params.category} slug={params.slug} />;
+export default async function Page({ params }: { params: Promise<PageParams> }) {
+  const resolvedParams = await params;
+  return <ProductDetailsPage category={resolvedParams.category} slug={resolvedParams.slug} />;
 }
