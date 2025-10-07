@@ -1,33 +1,35 @@
 "use client";
 
-import { ProductsListData } from "@/data/products.data";
 import { useContext, useState, useEffect } from "react";
+import { ProductsListData } from "@/data/products.data";
+import { BestProductListData } from "@/data/best-products.data";
 import { CartContext } from "@/contexts/cart-context";
+import { WishlistContext } from "@/contexts/wishlist-context";
 import toast from "react-hot-toast";
 import { MdAddShoppingCart } from "react-icons/md";
-import Image from "next/image";
-import { Rate } from "@/app/_components/rate";
-import { WishlistContext } from "@/contexts/wishlist-context";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { IoHeartDislikeSharp } from "react-icons/io5";
-import { BestProductListData } from "@/data/best-products.data";
+import Image from "next/image";
+import { Rate } from "@/app/_components/rate";
 import { IProductDetailsProps } from "./products-details.types";
 
-
-
-export default function ProductDetails({
-  category,
-  slug,
-
-}: IProductDetailsProps) {
+export default function ProductDetails({ category, slug }: IProductDetailsProps) {
   const { addToCart, removeFromCart, cartItems } = useContext(CartContext);
+  const { toggleWishlist, isInWishlist } = useContext(WishlistContext);
+
   const [isInCart, setIsInCart] = useState(false);
   const [selectedImage, setSelectedImage] = useState(0);
 
-  const allProductsData=[...ProductsListData,...BestProductListData]
+  const allProductsData = [...ProductsListData, ...BestProductListData];
   const product = allProductsData.find(
     (p) => p.slug === slug && p.category === category
   );
+
+  const productImages = product?.img
+    ? Array.isArray(product.img)
+      ? product.img.map((img) => `/images/${img}`)
+      : [`/images/${product.img}`]
+    : ["/images/none.jpg"];
 
   useEffect(() => {
     if (product) {
@@ -51,7 +53,7 @@ export default function ProductDetails({
       id: product.product_id,
       name: product.title,
       price: Number(finalPrice),
-      img: `/images/${product.img?.[0] || product.img || "none.jpg"}`,
+      img: productImages[0],
       quantity: 0,
     });
     toast.success("Product successfully added to cart!", {
@@ -63,14 +65,13 @@ export default function ProductDetails({
     removeFromCart(product.product_id, product.title);
   };
 
-  const { toggleWishlist, isInWishlist } = useContext(WishlistContext);
   const handleAddToWishlist = () => {
     toggleWishlist({
       id: product.product_id,
       name: product.title,
       img: productImages[0],
-      slug: slug,
-      category: category,
+      slug,
+      category,
     });
 
     if (!isInWishlist(product.product_id, product.title)) {
@@ -84,16 +85,10 @@ export default function ProductDetails({
     }
   };
 
-  const productImages = product.img
-    ? product.img.map((img) => `/images/${img}`)
-    : product.img
-    ? [`/images/${product.img}`]
-    : ["/images/none.jpg"];
-
   return (
     <section className="containerD mt-20">
       <div className="flex flex-col md:flex-row gap-10 justify-center mt-10 w-full p-2 mx-auto">
-        <div className="flex flex-col md:flex-row gap-10 border p-2 rounded-lg ">
+        <div className="flex flex-col md:flex-row gap-10 border p-2 rounded-lg">
           {/* Main Image */}
           <div className="rounded-md overflow-hidden">
             <Image
@@ -136,7 +131,6 @@ export default function ProductDetails({
 
           <div className="flex justify-between items-center">
             <Rate rate={product.rate} ratersNumber={product.ratersNumber} />
-
             <button onClick={handleAddToWishlist}>
               {isInWishlist(product.product_id, product.title) ? (
                 <FaHeart className="text-red-600 h-6 w-6" />

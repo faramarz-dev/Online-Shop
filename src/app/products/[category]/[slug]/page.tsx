@@ -3,10 +3,6 @@ import { BestProductListData } from "@/data/best-products.data";
 import ProductDetailsPage from "./products-details";
 import { IProductDetailsProps } from "@/app/_components/products/product-details/products-details.types";
 
-// Define the props type for the Page component
-interface PageProps {
-  params: IProductDetailsProps;
-}
 
 export async function generateMetadata({ params }: { params: IProductDetailsProps }) {
   const { slug, category } = params;
@@ -29,6 +25,6 @@ export async function generateMetadata({ params }: { params: IProductDetailsProp
 }
 
 // Update the Page component to receive and pass params
-export default function Page({ params }: PageProps) {
+export default function Page() {
   return <ProductDetailsPage />;
 }
