@@ -34,7 +34,6 @@ const AuthForm = () => {
       />
 
       <div className="absolute xs:flex xs:flex-col md:flex-row xs:items-center md:justify-around xs:gap-10 w-[90%] h-[700px]">
-        {/* متن خوش‌آمدگویی */}
         <div className="xs:w-[90%] md:w-[600px] text-gray-100 xs:text-center md:text-left">
           <h2 className="xs:text-2xl md:text-3xl font-bold mb-6">Welcome To OnlineShop!</h2>
           <p className="xs:text-sm md:text-base leading-relaxed">
@@ -44,7 +43,6 @@ const AuthForm = () => {
           </p>
         </div>
 
-        {/* فرم ورود یا ثبت‌نام */}
         <Formik
           initialValues={{
             name: isSignUp ? "" : "",
@@ -64,7 +62,7 @@ const AuthForm = () => {
               <h2 className="text-2xl font-bold text-center text-gray-700">
                 {isSignUp ? "Create Account" : "Log In"}
               </h2>
-              <p className="text-center text-gray-600 text-sm">
+              <p className="text-center text-gray-600 text-sm ">
                 {isSignUp
                   ? "Let's get started with your 30-day free trial"
                   : "Welcome back! Please log in"}

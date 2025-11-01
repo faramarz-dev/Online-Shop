@@ -30,14 +30,11 @@ const BestProductsCard: React.FC<IBestProductCard> = ({
   const finalPrice = ((1 - discount / 100) * price).toFixed(0);
   const { toggleWishlist, isInWishlist } = useContext(WishlistContext);
 
-
-const productImages = img
-    ? img.map(img => `/images/${img}`)
-    : img 
-      ? [`/images/${img}`] 
-      : ["/images/none.jpg"];
-
-
+  const productImages = img
+    ? img.map((img) => `/images/${img}`)
+    : img
+    ? [`/images/${img}`]
+    : ["/images/none.jpg"];
 
   const handleAddToCart = () => {
     addToCart({
@@ -106,13 +103,14 @@ const productImages = img
 
       <div className="card-content">
         <div className="flex items-center justify-between">
-            {title}
-            <button className="p-2 transition hidden group-hover:flex">
-              <Link href={`/products/${category}/${slug}`}target="_blank">
-                <TbListDetails className="text-gray-900 h-6 w-6 hover:text-purple-700" />
-              </Link>
-            </button>
-          </div>
+          <p className="line-clamp-1">{title}</p>
+
+          <button className="p-2 transition hidden group-hover:flex">
+            <Link href={`/products/${category}/${slug}`} target="_blank">
+              <TbListDetails className="text-gray-900 h-6 w-6 hover:text-purple-700" />
+            </Link>
+          </button>
+        </div>
 
         <div className="product-card-rate-wrapper">
           <Rate rate={rate} ratersNumber={ratersNumber} />

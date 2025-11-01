@@ -50,7 +50,7 @@ const AllProducts: React.FC<IAllProductsProps> = ({ visibleProducts }) => {
       <div className="flex justify-between  items-end">
         <p className="xs:text-xl lg:text-[2.2rem] md:text-[1.8rem] mb-12">Explore Our Products</p>
       </div>
-      <div className="grid grid-cols-1 place-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+      <div className="grid xs:grid-cols-1 place-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 3xl:grid-cols-6">
         {visibleProducts.map((item) => (
           <ProductsCard key={item.product_id} {...item} />
         ))}

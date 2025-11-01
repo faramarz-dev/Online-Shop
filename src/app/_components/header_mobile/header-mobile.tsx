@@ -55,7 +55,7 @@ interface HeaderMobileProps {
 
 export const HeaderMobile: React.FC<HeaderMobileProps> = ({ onClose }) => {
   return (
-    <div className="fixed cursor-auto right-0 top-0 z-[999] w-2/3 bg-purple-950 p-8">
+    <div className="fixed cursor-auto right-0 top-0 z-[999] w-2/3 bg-[#180a38] p-8">
       {/* logo && close btn */}
       <div className="flex flex-col border-b border-shop-gray-border pb-4">
         <div className="flex justify-between">

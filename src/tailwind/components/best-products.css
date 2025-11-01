@@ -1,5 +1,5 @@
 .product-card-wrapper {
-    @apply relative w-[270px] rounded-md border border-shop-gray-200 p-2.5 h-[410px] hover:border-shop-gray-600;
+    @apply relative w-[270px] rounded-md border border-shop-gray-200 p-2.5 h-[410px] hover:border-purple-600;
     .card-tools {
         @apply absolute right-6 hidden flex-col gap-2 group-hover:flex;
     }
@@ -11,9 +11,6 @@
     }
     .card-content {
         @apply flex flex-col gap-2.5;
-        .product-card-description {
-            @apply line-clamp-2 text-sm;
-        }
         .product-card-rate-wrapper {
             @apply flex items-center justify-start;
         }
